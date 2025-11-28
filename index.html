@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Songyul Kadymova | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #091b3b;
+      --navy-dark: #050f25;
+      --gold: #d4af37;
+      --light: #f5f7fb;
+      --text: #1f2933;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--navy-dark), var(--navy));
+      padding: 1rem;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1, h2, h3 {
+      color: var(--navy-dark);
+    }
+
+    .section-title {
+      border-left: 4px solid var(--gold);
+      padding-left: 0.5rem;
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero p {
+      color: #555;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid rgba(212,175,55,0.4);
+      color: var(--navy-dark);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: #e6c35e;
+    }
+
+    .btn-outline {
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+      font-size: 0.9rem;
+      background: white;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .hero-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* ABOUT SECTION */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-box {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .about-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* WORK SAMPLES */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      background: rgba(9,27,59,0.05);
+      border: 1px solid rgba(9,27,59,0.2);
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--navy-dark);
+      margin-top: 0.5rem;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(9,27,59,0.15);
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: linear-gradient(120deg, var(--navy-dark), var(--navy));
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 3rem;
+    }
+
+    .contact-box a {
+      color: var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    @media(max-width: 800px) {
+      .hero, .about-grid, .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <strong>Songyul Kadymova</strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work Samples</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div>
+      <h1>Cybersecurity Student & Emerging Professional</h1>
+      <p>
+        I am a cybersecurity major with a minor in data analytics, building a portfolio that connects hands-on technical work,
+        emergency management training, and entrepreneurial experience.
+      </p>
+
+      <div>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Data Analytics</span>
+        <span class="tag">Emergency Mgmt</span>
+        <span class="tag">Entrepreneurship</span>
+      </div>
+
+      <br>
+
+      <a href="#work"><button class="btn-primary">View Work</button></a>
+      <a href="#about"><button class="btn-outline">About Portfolio</button></a>
+    </div>
+
+    <div class="hero-card">
+      <h3>About This Website</h3>
+      <p>This portfolio was built using <strong>GitHub Pages</strong> to strengthen my technical skills.</p>
+      <ul>
+        <li>Secure hosting fundamentals</li>
+        <li>HTML & CSS practice</li>
+        <li>Version control with Git</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Me & Portfolio Goals</h2>
+    <p class="section-subtitle">
+      This section explains who I am as a learner and how this portfolio supports my academic and professional path.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-box">
+        <h3>Who I Am</h3>
+        <p>
+          My name is <strong>Songyul Kadymova</strong>. I am a cybersecurity student completing a minor in data analytics while 
+          balancing coursework, work, and running my small business, Luxury Delights.
+        </p>
+      </div>
+
+      <div class="about-box">
+        <h3>Portfolio Objectives</h3>
+        <ul class="about-list">
+          <li>Showcase applied learning</li>
+          <li>Demonstrate technical skills</li>
+          <li>Present work in a clean layout</li>
+          <li>Build a foundation for future updates</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <h2 class="section-title">Work Samples</h2>
+    <p class="section-subtitle">Four curated samples representing my skills and learning.</p>
+
+    <div class="cards">
+
+      <!-- FEMA -->
+      <div class="card">
+        <h3>FEMA Emergency Management Certifications</h3>
+        <p>
+          These FEMA courses introduced me to the Incident Command System, risk awareness, and how emergency management connects 
+          to cybersecurity and resilience.
+        </p>
+        <a class="btn-ghost" href="#">View Work Sample</a>
+      </div>
+
+      <!-- Luxury Delights -->
+      <div class="card">
+        <h3>Luxury Delights LLC – Business Experience</h3>
+        <p>
+          My small business has allowed me to develop branding, invoicing, order management, client communication, 
+          and professional presentation skills.
+        </p>
+        <a class="btn-ghost" href="#">View Work Sample</a>
+      </div>
+
+      <!-- Cyber Labs -->
+      <div class="card">
+        <h3>Cybersecurity Labs – XP Cyber Range</h3>
+        <p>
+          These labs include using Metasploit, PowerShell, and YAML configuration to understand vulnerabilities, exploits, 
+          and remediation in hands-on environments.
+        </p>
+        <a class="btn-ghost" href="#">View Work Sample</a>
+      </div>
+
+      <!-- Excel -->
+      <div class="card">
+        <h3>Excel & Data Analytics Coursework</h3>
+        <p>
+          This sample highlights my skills in Excel functions, charts, data organization, and presenting data clearly 
+          for decision-making.
+        </p>
+        <a class="btn-ghost" href="#">View Work Sample</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <p>
+        Thank you for viewing my portfolio! For questions or collaboration, email me at:
+      </p>
+      <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Songyul Kadymova · Portfolio built with GitHub Pages
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
